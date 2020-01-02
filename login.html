@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="./lib/flexible_css.debug.js"></script>
+    <script src="./lib/flexible.debug.js"></script>
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!-- 1. 顶部 -->
+    <div class="top clearfix">
+        <div class="a">
+            <a
+                href="https://talk8.suning.com/yunxin-web/wap/index.html?productPosition=SNYG&businessCode=snzy&terminalType=3&pageSource=37&enterCode=01&appCode=SNYGG&custNo=50d9bb2fc5fc2956&chatModel=guest&channelId=486744">联系客服</a>
+            <a href="#" class="zc">企业注册</a>
+        </div>
+    </div>
+    <!-- 2. 主体 -->
+    <main>
+        <h1>欢迎登录苏宁易购</h1>
+        <input type="number" autocomplete="off" id="phone" placeholder="请输入手机号"
+            onkeypress="return /[\d]/.test(String.fromCharCode(event.keyCode))" style="ime-mode:Disabled" />
+        <input type="text" class="yzm">
+        <a href="" class="gain_yzm">获取验证码</a>
+        <a href="" class="login">登录</a>
+        <a href="" class="yzm_login">验证码登录</a>
+        <script>
+            var phoneHidden = document.getElementById("phone")
+        </script>
+    </main>
+    <!-- 3. 底部 -->
+    <div class="bottom"></div>
+</body>
+
+</html>

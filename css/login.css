@@ -1,0 +1,57 @@
+html,
+body {
+    width: 100%;
+}
+
+
+/*  1. 顶部 */
+.top {
+    width: 100%;
+    height: calc(63rem/64);
+    padding: 0 calc(24rem/64);
+    line-height: calc(70rem/64);
+    font-size: calc(20.6rem/64);
+}
+
+.top .a {
+    float: right;
+}
+
+.top .a a {
+    color: #222;
+    padding-left: calc(34rem/64);
+    position: relative;
+}
+
+.top .zc::before {
+    content: "";
+    width: calc(1rem/64);
+    height: calc(28rem/64);
+    border-left: 1px solid #ddd;
+    position: absolute;
+    top: calc(-2rem/64);
+    left: calc(15rem/64);
+}
+
+
+/* 2. 主体 */
+main {
+    padding: calc(48rem/64) calc(64rem/64);
+}
+
+main h1 {
+    font-size: calc(30rem/64);
+    font-weight: 400;
+    color: #222;
+    margin: 0;
+}
+
+main #phone {
+    width: 100%;
+    border: transparent;
+    border-bottom: 1px solid #dfdfdf;
+    padding: calc(14rem/64) 0;
+    font-size: calc(40rem/64);
+    color: #222;
+    caret-color: #fa0;
+}

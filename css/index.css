@@ -1,1 +1,145 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+html,
+body {
+    width: 100%;
+    /* background: rgb(215, 7, 10); */
+    background: #d7070a;
+}
+
+
+/* 1. 顶部栏 */
+.top_bar {
+    width: 100%;
+}
+
+.top_bar .top_nav {
+    width: 100%;
+    height: calc(75rem/64);
+    padding: 0 calc(28.8rem/64);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_bar .top_nav div {
+    /* flex: 1; */
+}
+
+.top_nav a {
+    display: block;
+    /* width: 100%; */
+}
+
+.top_nav a img {
+    width: calc(30rem/64);
+}
+
+.top_nav .center img {
+    width: calc(280rem/64);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3. 底部栏 */
+.bottom_nav{
+    width: 100%;
+    height: calc(86rem/64);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+
+.bottom_nav ul{
+    display: flex;
+    text-align: center;
+}
+
+.bottom_nav li{
+    /* float: left; */
+    flex: 1;
+}
+
+.bottom_nav li a{
+    display: block;
+}
+
+.bottom_nav li img{
+    width: calc(41rem/64);
+    height: calc(41rem/64);
+    margin: calc(10rem/64) auto calc(4rem/64);
+}
+
+.bottom_nav li span{
+    display: block;
+
+}
+
+.bottom_nav li:first-child span {
+    font-weight: 700;
+}

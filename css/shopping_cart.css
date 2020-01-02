@@ -1,0 +1,145 @@
+html,
+body {
+    width: 100%;
+    background: #f5f5f9;
+}
+
+/* 1. 顶部 */
+.top {
+    width: 100%;
+    height: calc(75rem/64);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.top h1 {
+    margin: 0;
+    text-align: center;
+    line-height: calc(75rem/64);
+    font-size: calc(30rem/64);
+    letter-spacing: calc(-1rem/64);
+}
+
+
+/* 2. 主体 */
+main {
+    position: relative;
+}
+
+/* 2.1 去登陆 */
+main .login_nav {
+    margin: calc(21rem/64);
+    width: calc(599rem/64);
+    height: calc(51rem/64);
+    line-height: calc(52rem/64);
+    border-radius: calc(10rem/64);
+    padding: 0 calc(18.4rem/64);
+    background: #ffe37e;
+    font-size: calc(20.6rem/64);
+
+}
+
+.login_nav p {}
+
+.login_nav span {
+    height: calc(34rem/64);
+    position: absolute;
+    top: calc(8rem/64);
+    right: calc(40rem/64);
+    padding: 0 calc(4rem/64);
+    background: #222;
+    color: #ffe37e;
+    border-radius: calc(6rem/64);
+    line-height: calc(36rem/64);
+}
+
+
+/* 2.2 购物车 */
+main .cart {
+    text-align: center;
+    margin-top: calc(130rem/64);
+}
+
+.cart .img {
+    width: calc(149.2rem/64);
+    height: calc(149.2rem/64);
+    margin: 0 auto;
+}
+
+.cart .img a {
+    width: 100%;
+    height: 100%;
+}
+
+.cart img {
+    width: 100%;
+    height: 100%;
+}
+
+.cart p {
+    font-size: calc(23rem/64);
+    color: #666;
+    padding-top: calc(32rem/64);
+    padding-bottom: calc(28rem/64);
+}
+
+.cart .shopping {
+    display: inline-block;
+    width: calc(92rem/64);
+    height: calc(41rem/64);
+    line-height: calc(28rem/64);
+    padding: calc(6rem/64);
+    border: 1px solid #e5e5e8;
+    border-radius: calc(12rem/64);
+    background: #fff;
+    font-size: calc(20rem/64);
+    color: #666;
+}
+
+
+/* 2.3 没有更多  */
+main .etc_no{
+    width: calc(358rem/64);
+    height: calc(21rem/64);
+    background: url(../image/reach-bottom.png) no-repeat center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-top: calc(134rem/64);
+}
+
+
+/* 3. 底部栏 */
+.bottom_nav {
+    width: 100%;
+    height: calc(84rem/64);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+
+.bottom_nav ul {
+    display: flex;
+    text-align: center;
+}
+
+.bottom_nav li {
+    /* float: left; */
+    flex: 1;
+}
+
+.bottom_nav li a {
+    display: block;
+    color: #666;
+}
+
+.bottom_nav li img {
+    width: calc(41rem/64);
+    height: calc(41rem/64);
+    margin: calc(10rem/64) auto calc(5rem/64);
+}
+
+.bottom_nav li span {
+    display: block;
+
+}
