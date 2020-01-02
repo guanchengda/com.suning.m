@@ -54,4 +54,30 @@ main #phone {
     font-size: calc(40rem/64);
     color: #222;
     caret-color: #fa0;
+    margin-top: calc(46rem/64);
+    color: #fa0;
+    text-shadow: 0 0 0 #222;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+#phone::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: calc(24rem/64);
+}
+
+main .yzm {
+    width: calc(266rem/64);
+    /* border: transparent; */
+    /* border-bottom: 1px solid #dfdfdf; */
+
+    padding: calc(14rem/64) 0;
+    font-size: calc(36rem/64);
+    color: #222;
+    caret-color: #fa0;
+    margin-top: calc(26rem/64);
+    color: #fa0;
+    text-shadow: 0 0 0 #222;
+    /* -webkit-text-fill-color: transparent; */
+    letter-spacing: calc(40rem/64);
+    padding-left: calc(20rem/64);
 }
