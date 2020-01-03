@@ -18,6 +18,11 @@ body {
     z-index: 99;
 }
 
+.top a {
+    display: block;
+}
+
+
 .arrow {
     width: calc(20rem/64);
     height: calc(20rem/64);
@@ -27,6 +32,7 @@ body {
     margin-left: calc(28rem/64);
     margin-right: calc(18rem/64);
 }
+
 
 .search {
     flex: 1;

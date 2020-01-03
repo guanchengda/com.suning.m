@@ -28,15 +28,30 @@
         <h1>欢迎登录苏宁易购</h1>
         <input type="tel" autocomplete="off" id="phone" placeholder="请输入手机号" maxlength="11"
             onkeypress="return /[\d]/.test(String.fromCharCode(event.keyCode))" style="ime-mode:Disabled" />
-        <input type="text" autocomplete="off" class="yzm" maxlength="4"
-            onkeypress="return /[\d]/.test(String.fromCharCode(event.keyCode))" style="ime-mode:Disabled" />
-        <a href="" class="gain_yzm">获取验证码</a>
+        <div class="input_yzm">
+            <input type="text" autocomplete="off" class="yzm" maxlength="4"
+                onkeypress="return /[\d]/.test(String.fromCharCode(event.keyCode))" style="ime-mode:Disabled" />
+            <a href="" class="gain_yzm">获取验证码</a>
+            <span></span><span></span><span></span><span></span>
+        </div>
         <a href="" class="login">登录</a>
-        <a href="" class="yzm_login">验证码登录</a>
+        <a href="" class="zh_login">账号密码登录</a>
 
     </main>
     <!-- 3. 底部 -->
-    <div class="bottom"></div>
+    <div class="bottom">
+        <div class="other_login">
+            <span>其他登录方式</span>
+            <div class="img">
+                <a href="#"><img src="./image/icon_qq.png" alt=""></a>
+                <a href="#"><img src="./image/icon_epp.png" alt=""></a>
+                <a href="#"><img src="./image/icon_k.png" alt=""></a>
+            </div>
+        </div>
+        <div class="agree">
+            <p><span>我同意</span><i>《</i><a href="#">苏宁易购会员章程</a><i>》</i><i>《</i><a href="#">易付宝协议</a><i>》</i></p>
+        </div>
+    </div>
 </body>
 
 </html>

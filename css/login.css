@@ -1,6 +1,8 @@
 html,
 body {
     width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 
@@ -54,9 +56,9 @@ main #phone {
     font-size: calc(40rem/64);
     color: #222;
     caret-color: #fa0;
-    margin-top: calc(46rem/64);
-    color: #fa0;
-    text-shadow: 0 0 0 #222;
+    margin-top: calc(50rem/64);
+    color: #222;
+    /* text-shadow: 0 0 0 #222; */
     /* -webkit-text-fill-color: transparent; */
 }
 
@@ -65,19 +67,170 @@ main #phone {
     font-size: calc(24rem/64);
 }
 
-main .yzm {
-    width: calc(266rem/64);
-    /* border: transparent; */
-    /* border-bottom: 1px solid #dfdfdf; */
+main .input_yzm {
+    position: relative;
+}
 
+main .yzm {
+    width: calc(360rem/64);
+    border: transparent;
+    /* border-bottom: 1px solid #dfdfdf; */
     padding: calc(14rem/64) 0;
     font-size: calc(36rem/64);
     color: #222;
     caret-color: #fa0;
-    margin-top: calc(26rem/64);
+    margin-top: calc(30rem/64);
     color: #fa0;
     text-shadow: 0 0 0 #222;
-    /* -webkit-text-fill-color: transparent; */
-    letter-spacing: calc(40rem/64);
-    padding-left: calc(20rem/64);
+    -webkit-text-fill-color: transparent;
+    letter-spacing: calc(63.2rem/64);
+    padding-left: calc(21rem/64);
+    overflow: hidden;
+}
+
+main .gain_yzm {
+    display: inline-block;
+    width: calc(169rem/64);
+    height: calc(67rem/64);
+    line-height: calc(67rem/64);
+    position: absolute;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: calc(10rem/64);
+    font-size: calc(25rem/64);
+    text-align: center;
+    top: calc(34rem/64);
+    right: 0;
+}
+
+.input_yzm span {
+    position: absolute;
+    width: calc(66rem/64);
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.input_yzm span:nth-last-child(4) {
+    left: calc(0rem/64);
+    bottom: calc(2rem/64);
+}
+
+.input_yzm span:nth-last-child(3) {
+    left: calc(80rem/64);
+    bottom: calc(2rem/64);
+}
+
+.input_yzm span:nth-last-child(2) {
+    left: calc(163rem/64);
+    bottom: calc(2rem/64);
+}
+
+.input_yzm span:nth-last-child(1) {
+    left: calc(246rem/64);
+    bottom: calc(2rem/64);
+}
+
+
+
+main a:nth-last-child(-n+2) {
+    display: block;
+}
+
+main a.login {
+    width: 100%;
+    height: calc(77rem/64);
+    line-height: calc(77rem/64);
+    text-align: center;
+    font-size: calc(30rem/64);
+    font-weight: 700;
+    margin-top: calc(52rem/64);
+    color: #222;
+    background: #ffcc00;
+    border-radius: calc(16rem/64);
+}
+
+main .zh_login {
+    width: 100%;
+    height: calc(77rem/64);
+    line-height: calc(77rem/64);
+    text-align: center;
+    font-size: calc(25.8rem/64);
+    margin-top: calc(22rem/64);
+    color: #222;
+}
+
+
+/* 3. 底部 */
+.bottom {
+    position: absolute;
+    left: calc(126rem/64);
+    bottom: calc(38rem/64);
+    width: calc(410rem/64);
+}
+
+.other_login {
+    width: 100%;
+    text-align: center;
+    margin-bottom: calc(30rem/64);
+}
+
+.other_login span {
+    display: block;
+    color: #999;
+    position: relative;
+    z-index: 22;
+    margin-bottom: calc(20rem/64);
+}
+
+.other_login span::before,
+.other_login span::after {
+    content: "";
+    position: absolute;
+    width: calc(128rem/64);
+    height: 1px;
+    background: #ddd;
+    z-index: 11;
+    top: calc(5rem/64);
+
+}
+
+.other_login span::before {
+    left: 0;
+}
+
+.other_login span::after {
+    right: 0;
+}
+
+.other_login .img {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.other_login .img a {
+    display: block;
+}
+
+.other_login .img img {
+    width: calc(56.4rem/64);
+}
+
+
+.bottom .agree {
+    width: 100%;
+}
+
+.bottom .agree span {
+    color: #999;
+}
+
+.bottom .agree i {
+    color: #101010;
+    font-weight: bold;
+}
+
+.bottom .agree a {
+    color: #101010;
+    text-decoration: underline;
 }

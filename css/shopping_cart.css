@@ -41,11 +41,15 @@ main .login_nav {
 
 .login_nav p {}
 
-.login_nav span {
-    height: calc(34rem/64);
+.login_nav a {
     position: absolute;
     top: calc(8rem/64);
     right: calc(40rem/64);
+}
+
+.login_nav span {
+    display: block;
+    height: calc(34rem/64);
     padding: 0 calc(4rem/64);
     background: #222;
     color: #ffe37e;
@@ -98,7 +102,7 @@ main .cart {
 
 
 /* 2.3 没有更多  */
-main .etc_no{
+main .etc_no {
     width: calc(358rem/64);
     height: calc(21rem/64);
     background: url(../image/reach-bottom.png) no-repeat center;
