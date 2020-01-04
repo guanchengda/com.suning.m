@@ -292,9 +292,26 @@ main .discounts {
 
 .flash_sale .count_down {
     position: absolute;
-    top: 0;
-    left: calc(100rem/64);
+    top: calc(18rem/64);
+    left: calc(122rem/64);
 }
+
+.flash_sale .count_down b {
+    float: left;
+    width: calc(29rem/64);
+    height: calc(24rem/64);
+    line-height: calc(24rem/64);
+    text-align: center;
+    border-radius: calc(7rem/64);
+    background: #fc0;
+    color: #333;
+}
+
+.flash_sale .count_down i {
+    float: left;
+    padding: 0 calc(3rem/64);
+}
+
 
 /* 为您推荐 */
 .discounts .item2 {
@@ -488,8 +505,205 @@ main .coupon a {
 }
 
 .coupon .p p:nth-child(2) {
-    font-size: calc(16rem/64);
+    font-size: calc(18rem/64);
 }
+
+
+/* 2.8 推荐榜单 */
+main .recommend_list {
+    margin-top: calc(20rem/64);
+}
+
+.recommend_list a {
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.recommend_list .title img {
+    width: 100%;
+}
+
+/* 1 */
+.recommend_list .list1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 calc(16rem/64);
+}
+
+.recommend_list .list1>div {
+    width: calc(193rem/64);
+    height: calc(227rem/64);
+    background: #fff;
+}
+
+.recommend_list .list1 img:nth-of-type(1) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.recommend_list .list1 img:nth-of-type(2) {
+    width: calc(128rem/64);
+    position: absolute;
+    top: calc(10rem/64);
+    left: calc(34rem/64);
+}
+
+.recommend_list .list1 span {
+    position: absolute;
+    bottom: calc(65rem/64);
+    left: calc(54rem/64);
+    width: calc(86rem/64);
+    height: calc(29rem/64);
+    border: calc(2rem/64) solid #d9a87a;
+    border-radius: calc(20rem/64);
+    text-align: center;
+    line-height: calc(29rem/64);
+    color: #d9a87a;
+    background: #fff;
+    z-index: 11;
+}
+
+.recommend_list .list1 .p {
+    position: absolute;
+    bottom: calc(8rem/64);
+    left: calc(18rem/64);
+    line-height: calc(26rem/64);
+}
+
+.recommend_list .p p {
+    color: #fff;
+    font-size: calc(22rem/64);
+    text-align: center;
+}
+
+.recommend_list .p p:nth-of-type(2) {
+    opacity: .8;
+    font-size: calc(18rem/64);
+}
+
+
+
+/* 2 */
+.recommend_list .list2 {
+    margin: 0 calc(18rem/64);
+    margin-top: calc(8rem/64);
+    border-radius: calc(14rem/64);
+    overflow: hidden;
+}
+
+.recommend_list .list2 .list {
+    float: left;
+    width: 50%;
+    height: calc(205rem/64);
+    background: #fff;
+    padding-top: calc(20rem/64);
+    padding-left: calc(20rem/64);
+    position: relative;
+}
+
+.recommend_list .list2 .list:nth-of-type(-n+2) {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.recommend_list .list2 .list:nth-of-type(1),
+.recommend_list .list2 .list:nth-of-type(3) {
+    border-right: 1px solid #f2f2f2;
+}
+
+.recommend_list .list2 h3 {
+    font-weight: 700;
+    font-size: calc(23rem/64);
+    color: #333;
+    display: inline-block;
+    margin-right: calc(6rem/64);
+}
+
+.recommend_list .list2 span {
+    display: inline-block;
+    width: calc(76.8rem/64);
+    height: calc(24rem/64);
+    text-align: center;
+    line-height: calc(24rem/64);
+    border-radius: calc(14rem/64);
+    background: #f9f5ee;
+    color: #ab813a;
+}
+
+.recommend_list .list2 p {
+    padding-top: calc(4rem/64);
+    color: #999;
+    font-size: calc(20.6rem/64);
+}
+
+.recommend_list .list2 .img {
+    padding-left: calc(4rem/64);
+}
+
+.recommend_list .list2 img {
+    width: calc(119.4rem/64);
+    float: left;
+    margin-top: calc(5rem/64);
+    margin-right: calc(24rem/64);
+}
+
+.recommend_list .list2 a:nth-of-type(2) img {
+    margin-right: 0;
+}
+
+
+/* 2.9 猜你喜欢 */
+main .guess_like {
+    margin-top: calc(32rem/64);
+    padding: 0 calc(20.4rem/64);
+}
+
+.guess_like .title img {
+    width: 100%;
+}
+
+/* 商品 */
+.guess_like .like_goods {
+    display: flex;
+    justify-content: space-between;
+}
+
+.guess_like .like_goods ul {
+    float: left;
+    width: calc(291.6rem/64);
+    height: calc(2000rem/64);
+}
+
+.guess_like .like_goods ul:nth-of-type(1) {
+    background: pink;
+}
+
+.guess_like .like_goods ul:nth-of-type(2) {
+    background: plum;
+}
+
+.guess_like li {
+    width: calc(291.6rem/64);
+    height: calc(463rem/64);
+    background: #fff;
+    border-radius: calc(14rem/64);
+    overflow: hidden;
+}
+
+.guess_like a {
+    display: block;
+}
+
+.guess_like .good img {
+    width: calc(291.6rem/64);
+}
+
+
+
+
+
 
 
 
