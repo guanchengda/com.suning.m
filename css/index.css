@@ -11,6 +11,7 @@ body {
 .top_bar {
     width: 100%;
     position: relative;
+    z-index: 33;
 }
 
 .top_bar .top_bg {
@@ -87,10 +88,66 @@ body {
 }
 
 
+/* 1.0-->2.0 固定头部烂 */
+.top_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(75.1rem/64);
+}
+
+.top_fixed .bg img {
+    width: 100%;
+    height: calc(75.1rem/64);
+}
+
+.top_fixed .topfixed_nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(29.1rem/64);
+}
+
+.top_fixed .topfixed_nav a {
+    display: block;
+}
+
+.top_fixed .topfixed_nav img {
+    width: calc(31rem/64);
+    height: calc(51.2rem/64);
+    margin-top: calc(12rem/64);
+}
+
+.top_fixed .topfixed_nav .search {
+    width: 100%;
+    margin: 0 calc(14rem/64);
+    margin-top: calc(12rem/64);
+}
+
+/* 点击直达顶部 */
+.arrive_top {
+    width: calc(85.4rem/64);
+    height: calc(85.4rem/64);
+    background: url(../image/top.png) no-repeat;
+    background-size: calc(85.4rem/64) calc(85.4rem/64);
+    position: fixed;
+    bottom: calc(105rem/64);
+    right: calc(13rem/64);
+    z-index: 99;
+}
+
+
+
+
 
 /* 2. 主体 */
 main {
     width: 100%;
+    margin-bottom: calc(86rem/64);
 }
 
 /* 2.1 轮播 */
@@ -101,6 +158,7 @@ main .carousel {
 
 .carousel .lb_bg {
     width: 100%;
+    position: relative;
 }
 
 .carousel .lb_bg img {
@@ -116,17 +174,23 @@ main .carousel {
 }
 
 .carousel_lb li {
-    border-radius: calc(22rem/64);
+    height: calc(222rem/64);
+    border-radius: calc(18rem/64);
     overflow: hidden;
+    position: relative;
 }
 
 .carousel_lb li a {
     display: block;
+    width: calc(599rem/64);
+    height: calc(222rem/64);
 }
 
 .carousel_lb li img {
     width: calc(599rem/64);
-    height: calc(222rem/64);
+    height: calc(314.1rem/64);
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -630,6 +694,8 @@ main .recommend_list {
     border-radius: calc(14rem/64);
     background: #f9f5ee;
     color: #ab813a;
+    position: relative;
+    bottom: calc(4rem/64);
 }
 
 .recommend_list .list2 p {
@@ -657,7 +723,7 @@ main .recommend_list {
 /* 2.9 猜你喜欢 */
 main .guess_like {
     margin-top: calc(32rem/64);
-    padding: 0 calc(20.4rem/64);
+    padding: 0 calc(5.4rem/64);
 }
 
 .guess_like .title img {
@@ -668,27 +734,28 @@ main .guess_like {
 .guess_like .like_goods {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .guess_like .like_goods ul {
-    float: left;
     width: calc(291.6rem/64);
-    height: calc(2000rem/64);
 }
 
 .guess_like .like_goods ul:nth-of-type(1) {
-    background: pink;
+    /* background: pink; */
 }
 
 .guess_like .like_goods ul:nth-of-type(2) {
-    background: plum;
+    /* background: plum; */
 }
 
 .guess_like li {
     width: calc(291.6rem/64);
-    height: calc(463rem/64);
+    height: calc(462.6rem/64);
+    /* padding-bottom: calc(20rem/64); */
     background: #fff;
-    border-radius: calc(14rem/64);
+    border-radius: calc(8rem/64);
+    margin-bottom: calc(15.4rem/64);
     overflow: hidden;
 }
 
@@ -700,28 +767,166 @@ main .guess_like {
     width: calc(291.6rem/64);
 }
 
+.like_goods .info {
+    padding-top: calc(18rem/64);
+    padding-left: calc(10rem/64);
+}
+
+.like_goods p {
+    height: calc(57rem/64);
+    line-height: calc(29rem/64);
+    font-size: calc(22.2rem/64);
+    font-weight: 700;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.like_goods .good_tag {
+    height: calc(56.5rem/64);
+    padding-top: calc(10rem/64);
+    padding-bottom: calc(25.4rem/64);
+    color: #333;
+}
+
+.like_goods .good_tag .zy {
+    display: inline-block;
+    height: calc(20.6rem/64);
+    padding: calc(1rem/64) calc(4.6rem/64);
+    line-height: calc(20.6rem/64);
+    text-align: center;
+    font-size: calc(18rem/64);
+    background: #fc0;
+    border-radius: calc(6rem/64);
+}
+
+.like_goods .good_tag .other {
+    display: inline-block;
+    height: calc(20.6rem/64);
+    padding: calc(1rem/64) calc(10rem/64);
+    margin-left: calc(3rem/64);
+    line-height: calc(18rem/64);
+    text-align: center;
+    font-size: calc(18rem/64);
+    background: #fefbee;
+    border: 1px solid #fb0;
+    border-radius: calc(6rem/64);
+}
+
+.like_goods .good_tag span:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.like_goods .price {
+    /* padding-top: calc(34rem/64); */
+    padding-left: calc(2em/64);
+}
+
+.like_goods .price em {
+    float: left;
+    color: #f42;
+    font-weight: 700;
+}
+
+.like_goods .price em:nth-of-type(1) {
+    font-size: calc(20rem/64);
+    line-height: calc(23.9rem/64);
+}
+
+.like_goods .price em:nth-of-type(2) {
+    font-size: calc(30.6rem/64);
+    line-height: calc(18.5rem/64);
+}
+
+.like_goods .price em:nth-of-type(3) {
+    font-size: calc(20rem/64);
+    line-height: calc(23.9rem/64);
+}
+
+.like_goods .price span {
+    font-size: calc(18rem/64);
+    color: #999;
+    margin-left: calc(11rem/64);
+}
 
 
+/* 修改商品高度 */
+.guess_like .like_goods .add_sour {
+    height: calc(530rem/64);
+}
+
+/* line */
+.guess_like .line {
+    width: calc(254.28rem/64);
+    height: 1px;
+    margin: calc(16rem/64) auto 0;
+    background: rgba(0, 0, 0, 0.1);
+}
 
 
+/* 商品source */
+.like_goods .source {
+    padding-top: calc(16rem/64);
+    padding-left: calc(18.8rem/64);
+}
+
+.like_goods .source a {
+    position: relative;
+}
+
+.like_goods .source img {
+    float: left;
+    width: calc(35.8rem/64);
+}
 
 
+.like_goods .source span {
+    float: left;
+    font-size: calc(20.8rem/64);
+    color: #666;
+    margin-left: calc(10rem/64);
+    line-height: calc(40rem/64);
+}
+
+.like_goods .source i {
+    position: absolute;
+    top: calc(11rem/64);
+    right: calc(18rem/64);
+    width: calc(8.6rem/64);
+    height: calc(15.4rem/64);
+    background: url(../image/goods_arrow-icon1.png) no-repeat;
+    background-size: calc(8.6rem/64) calc(15.4rem/64);
+    box-shadow: 0 0px black;
+}
 
 
+/* add_etc */
+/* add_etc */
+/* add_etc */
 
 
+/* 上网上街上苏宁 */
+.guess_like .go_suning img {
+    width: 100%;
+    height: calc(148rem/64);
+    margin: 0 auto;
+}
 
 
+/* 3.0 下载客户端 */
+main .download_app {}
 
+.download_app a {
+    display: block;
+}
 
-
-
-
-
-
-
-
-
+.download_app img {
+    width: 100%;
+    height: calc(128rem/64);
+}
 
 
 

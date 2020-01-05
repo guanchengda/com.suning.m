@@ -76,8 +76,8 @@ main .main_list {
     top: calc(75rem/64);
     left: 0;
     width: calc(149rem/64);
-    /* height: calc(100vh - 75rem/64); */
-    height: calc(1063rem/64);
+    /* height: calc(1310.8rem/64); */
+    height: calc(100vh - 75rem/64);
     overflow-y: auto;
     z-index: 66;
 }

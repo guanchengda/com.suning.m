@@ -15,43 +15,104 @@
     <link rel="stylesheet" href="./lib/normalize.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
 </head>
 
 <body>
     <!-- 1. 顶部栏 -->
     <div class="top_bar">
         <div class="top_bg">
-            <img src="./upload/top_bg01.png" alt="">
+            <img src="./upload/top_bg03.png" alt="">
         </div>
         <!-- 1.1 顶部导航 -->
         <div class="top_nav">
             <div class="left">
-                <a href="javascript:;"><img src="./image/sort.png" alt=""></a>
+                <a href="./list1.html"><img src="./image/sort.png" alt=""></a>
             </div>
             <div class="center">
                 <a href="javascript:;"><img src="./upload/top_gif02.gif" alt=""></a>
             </div>
             <div class="right">
-                <a href="javascript:;"><img src="./image/login.png" alt=""></a>
+                <a href="./login.html"><img src="./image/login.png" alt=""></a>
             </div>
         </div>
         <!-- 1.2 搜索框 -->
         <div class="search">
-            <a href="./search.html"><i></i>商品/店铺</a>
+            <a href="./search1.html"><i></i>商品/店铺</a>
+        </div>
+
+        <!-- 1.0--2.0 -->
+        <div class="top_fixed">
+            <div class="bg">
+                <img src="./upload/topfixed_bg.png" alt="">
+            </div>
+            <div class="topfixed_nav">
+                <div class="left">
+                    <a href="./list1.html"><img src="./image/sort.png" alt=""></a>
+                </div>
+                <div class="center search">
+                    <a href="./search1.html"><i></i>商品/店铺</a>
+                </div>
+                <div class="right">
+                    <a href="./login.html"><img src="./image/login.png" alt=""></a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- 点击直达顶部 -->
+    <div class="arrive_top"></div>
+    <!-- js -->
+    <script>
+        // 1
+        // 一. 滚动条滚动实现顶部固定导航栏的隐藏和显示
+        $(window).scroll(function () {
+            // 1.1 在事件中获取页面卷去的距离
+            var v = $(window).scrollTop();
+            // 1.2 如果页面卷去的距离大于等于815 就显示侧边栏， 否则隐藏侧边栏
+            if (v >= 815) {
+                $(".top_fixed").css({
+                    "opacity": "1",
+                });
+            } else {
+                $(".top_fixed").css({
+                    "opacity": "0",
+                });
+            }
+        });
+
+        // 2
+        // 滚动条滚动实现直达顶部按钮的隐藏和显示
+        $(window).scroll(function () {
+            var v = $(window).scrollTop();
+            if (v >= 1214) {
+                $(".arrive_top").css({
+                    "opacity": "1",
+                });
+            } else {
+                $(".arrive_top").css({
+                    "opacity": "0",
+                });
+            }
+        });
+        // top返回顶部
+        $('.arrive_top').click(function () {
+            $('html,body').animate({
+                scrollTop: 0
+            });
+        });
+    </script>
 
     <!-- 2. 主体-->
     <main>
         <!-- 2.1 轮播 -->
         <div class="carousel">
             <div class="lb_bg">
-                <img src="./upload/top_bg02.png" alt="">
+                <img src="./upload/top_bg04.png" alt="">
             </div>
             <div class="carousel_lb">
                 <ul>
-                    <li><a href="javascript:;"><img src="./upload/lb_01.png" alt=""></a></li>
+                    <li><a href="javascript:;"><img src="./upload/lb_02.png" alt=""></a></li>
                     <!-- <li><a href="javascript:;"><img src="" alt=""></a></li>
                    <li><a href="javascript:;"><img src="" alt=""></a></li>
                    <li><a href="javascript:;"><img src="" alt=""></a></li> -->
@@ -272,7 +333,7 @@
                     <p>卖爆6.3万件</p>
                     <div class="img clearfix">
                         <a href="javascript:;"><img src="./upload/recommend_goods10.webp" alt=""></a>
-                        <a href="javascript:;"><img src="./upload/recommend_goods11.webp" alt=""></a>
+                        <a href="javascript:;" id="guess_goods"><img src="./upload/recommend_goods11.webp" alt=""></a>
                     </div>
                 </div>
 
@@ -280,7 +341,7 @@
         </div>
 
         <!-- 2.9 猜你喜欢 -->
-        <div class="guess_like">
+        <div class="guess_like" id="guess_goods">
             <div class="title">
                 <img src="./upload/guess_like.webp" alt="猜你喜欢">
             </div>
@@ -290,130 +351,368 @@
                     <li class="nor_good">
                         <a href="javascript:;">
                             <div class="good"> <img src="./upload/like_goods01.webp" alt=""></div>
-                            <p>彩虹（RAINBOW）电热毯单人双人电褥子（1.5*1.2米）可调温单控安全遇水不漏电 排潮除湿</p>
-                            <div class="good_tag">
-                                <span class="zy">自营</span>
-                                <span class="other">拼购</span>
+                            <div class="info">
+                                <p>彩虹（RAINBOW）电热毯单人双人电褥子（1.5*1.2米）可调温单控安全遇水不漏电 排潮除湿</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">拼购</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>79</em>
+                                    <span class="price_comments">600+评价</span>
+                                </div>
                             </div>
-                            <div class="price">
-                                <em>￥</em>
-                                <em>79</em>
-                                <span class="price_comments">600+评价</span>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods02.webp" alt=""></div>
+                            <div class="info">
+                                <p>【三只松鼠_芒果干116gx3】办公室零食蜜饯果脯水果干休闲食品</p>
+                                <div class="good_tag">
+                                    <!-- <span class="zy">自营</span> -->
+                                    <span class="other">领券78-5</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>99</em>
+                                    <span class="price_comments">600+评价</span>
+                                </div>
                             </div>
-
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods03.webp" alt=""></div>
+                            <div class="info">
+                                <p>彩虹（RAINBOW）电热毯单人双人电褥子（1.5*1.2米）可调温单控安全遇水不漏电 排潮除湿</p>
+                                <div class="good_tag">
+                                    <!-- <span class="zy">自营</span> -->
+                                    <span class="other">领券78-5</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>29</em><em>.9</em>
+                                    <span class="price_comments">13万+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good add_sour">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods04.webp" alt=""></div>
+                            <div class="info">
+                                <p>【三只松鼠_年货坚果大礼包2355g】零食每日坚果礼盒干果小吃送礼</p>
+                                <div class="good_tag">
+                                    <span class="other">大聚惠</span>
+                                    <span class="other">每288-30</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>288</em>
+                                    <span class="price_comments">1600+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="line"></div>
+                        <div class="source clearfix">
+                            <a href="javascript:;" class="clearfix">
+                                <img src="./upload/source01.png" alt="">
+                                <span>苏宁超市</span>
+                                <i></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods05.webp" alt=""></div>
+                            <div class="info">
+                                <p>海锚新国标接线板插排插线板开关分控四位1.8米拖线板延长线插座HM-634白色ANCHOR</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <!-- <span class="other">抢</span> -->
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>30</em><em>.9</em>
+                                    <span class="price_comments">1000+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good add_sour">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods06.webp" alt=""></div>
+                            <div class="info">
+                                <p>春雪食品 爆汁鸡米花500g/袋装 国产出口日本级 清真食品 鸡肉块 盐酥鸡 鸡米花</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">抢</span>
+                                    <span class="other">满5件打5折</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>25</em><em>.8</em>
+                                    <span class="price_comments">13万+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="line"></div>
+                        <div class="source clearfix">
+                            <a href="javascript:;" class="clearfix">
+                                <img src="./upload/source02.png" alt="">
+                                <span>苏宁生鲜</span>
+                                <i></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods07.webp" alt=""></div>
+                            <div class="info">
+                                <p>南极人(NanJiren)家纺 简约全棉四件套床上用品纯棉斜纹双人被套床单式4件套1.51.8m床 思羽情怀灰 1.5m/1.8m床通用(被套200*230cm)</p>
+                                <div class="good_tag">
+                                    <!-- <span class="zy">自营</span> -->
+                                    <span class="other">领券99-20</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>129</em>
+                                    <span class="price_comments">2.5万+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods08.webp" alt=""></div>
+                            <div class="info">
+                                <p>爱国者（aigo）32GB USB2.0 UDP系列 迷你金属U盘 U268 高速车载U盘 银色</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <!-- <span class="other">领券99-20</span> -->
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>28</em>
+                                    <span class="price_comments">1.1万+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods09.webp" alt=""></div>
+                            <div class="info">
+                                <p>爱仕达（ASD) 不粘锅炒锅 燃气灶明火专用家用不粘易洁28cm平底炒菜锅 送木铲JL28G2WG-K</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">大聚惠</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>69</em>
+                                    <span class="price_comments">2300+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods10.webp" alt=""></div>
+                            <div class="info">
+                                <p>松下咖啡机 NC-R600</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">领券999-100</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>999</em>
+                                    <span class="price_comments">60+评价</span>
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ul>
-                <ul class="right_list"></ul>
-
+                </ul>
+                <ul class="right_list">
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods11.webp" alt=""></div>
+                            <div class="info">
+                                <p>小熊（Bear）电蒸锅 DZG-C60A1 6L大容量双层电蒸锅多功能家用馒头包子早餐神器</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">大聚惠</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>139</em>
+                                    <span class="price_comments">2700+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods12.webp" alt=""></div>
+                            <div class="info">
+                                <p>水井坊 典藏大师版 50ML【赠品非卖，付邮品鉴专享】</p>
+                                <div class="good_tag">
+                                    <!-- <span class="zy">自营</span> -->
+                                    <span class="other">领券30-30</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>200</em>
+                                    <span class="price_comments">300+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods13.webp" alt=""></div>
+                            <div class="info">
+                                <p>奥克斯（AUX）干衣机 RC-R3 不锈钢干衣机 家用静音省电干衣机 衣柜式风干机 便携宿舍烘衣机</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <!-- <span class="other">领券999-100</span> -->
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>139</em>
+                                    <span class="price_comments">5300+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods14.webp" alt=""></div>
+                            <div class="info">
+                                <p>固本堂(GuBenTang)固本堂阿胶糕即食女纯手工500g红枣枸杞味阿胶膏</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">抢</span>
+                                    <span class="other">满赠</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>38</em><em>.7</em>
+                                    <span class="price_comments">7600+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods15.webp" alt=""></div>
+                            <div class="info">
+                                <p>煲仔饭砂锅耐高温汤煲陶瓷小沙锅煲汤锅炖锅明火家用燃气汤锅小号 1.8L韩式煲</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">拼购</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>49</em>
+                                    <span class="price_comments">700+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods16.webp" alt=""></div>
+                            <div class="info">
+                                <p>【中华特色】宜宾馆 戎陈坊四川泡菜酸菜泡酸菜400g</p>
+                                <div class="good_tag">
+                                    <!-- <span class="zy">自营</span> -->
+                                    <!-- <span class="other">领券999-100</span> -->
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>16</em><em>.98</em>
+                                    <span class="price_comments">500+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods17.webp" alt=""></div>
+                            <div class="info">
+                                <p>张裕先锋西班牙进口桃红葡萄酒 爱欧公爵曼姿桃红葡萄酒整箱装 750ml*6</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">返</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>218</em>
+                                    <span class="price_comments">60+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods18.webp" alt=""></div>
+                            <div class="info">
+                                <p>康宝NAAFI/耐惠ZTP380X-P2家用厨房商用立式消毒柜大容量双门</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">抢</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>899</em>
+                                    <span class="price_comments">2300+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods19.webp" alt=""></div>
+                            <div class="info">
+                                <p>形象美维生素E乳 温和滋养补水保湿细腻美肌身体乳液100ml</p>
+                                <div class="good_tag">
+                                    <!-- <span class="zy">自营</span> -->
+                                    <span class="other">抢</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>4</em><em>.9</em>
+                                    <span class="price_comments">800+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nor_good">
+                        <a href="javascript:;">
+                            <div class="good"> <img src="./upload/like_goods20.webp" alt=""></div>
+                            <div class="info">
+                                <p>可心柔 润+系列 婴幼儿专用抽纸 3层 40抽/包 纸巾</p>
+                                <div class="good_tag">
+                                    <span class="zy">自营</span>
+                                    <span class="other">满30减3</span>
+                                </div>
+                                <div class="price">
+                                    <em>￥</em><em>2</em><em>.4</em>
+                                    <span class="price_comments">6.7万+评价</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 上网上街上苏宁 -->
+                <div class="go_suning">
+                    <img src="./upload/go_suning.png" alt="上网上街上苏宁">
+                </div>
             </div>
-
-
-
-
-
         </div>
 
 
-
-
-
-
-
-
-
-
         <!-- 3.0 下载客户端 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="download_app">
+            <a href="javascript:;">
+                <img src="./upload/download_client.webp" alt="下载苏宁易购客户端">
+            </a>
+        </div>
 
     </main>
-
-
-
-
 
 
 
     <!-- 3. 底部栏 -->
     <div class="bottom_nav">
         <ul class="clearfix">
-            <li><a href="#"><img src="./image/like-icon.png" alt=""><span>猜你喜欢</span></a></li>
+            <li><a href="#guess_goods"><img src="./image/like-icon.png" alt=""><span>猜你喜欢</span></a></li>
             <li><a href="./list1.html"><img src="./image/list-icon.png" alt=""><span>分类</span></a></li>
             <li><a href="#"><img src="./image/willRob_list-icon1.png" alt=""><span>必抢清单</span></a></li>
             <li><a href="./shopping_cart.html"><img src="./image/cart-icon1.png" alt=""><span>购物车</span></a></li>

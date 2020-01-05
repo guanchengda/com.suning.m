@@ -1,0 +1,126 @@
+html,
+body {
+    width: 100%;
+    background: #F2F2F2;
+    font-family: Arial,
+        Helvetica,
+        STHeiTi,
+        sans-serif;
+}
+
+
+/* 1. 头部 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(75rem/64);
+    box-shadow: 0 1px 1px #DCDCDC;
+    background: #fff;
+}
+
+header .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(72rem/64);
+    height: calc(60rem/64);
+}
+
+header .back::before {
+    content: "";
+    width: calc(20.5rem/64);
+    height: calc(20.5rem/64);
+    border-top: 1px solid #353d44;
+    border-left: 1px solid #353d44;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: calc(26rem/64);
+    left: calc(28rem/64);
+}
+
+header .search {
+    position: absolute;
+    top: calc(13rem/64);
+    left: calc(68rem/64);
+    width: calc(480rem/64);
+    height: calc(51rem/64);
+    background: #eee;
+    border-radius: calc(8rem/64);
+}
+
+header .search i {
+    position: absolute;
+    top: calc(15rem/64);
+    left: calc(13rem/64);
+    width: calc(20.5rem/64);
+    height: calc(20.5rem/64);
+    background: url(../image/search-icon3.png) no-repeat;
+    background-size: calc(20.5rem/64) calc(20.5rem/64);
+}
+
+header .search input {
+    width: calc(390rem/64);
+    height: calc(47rem/64);
+    border: 0;
+    background: #eee;
+    font-size: calc(22.2rem/64);
+}
+
+header #search {
+    position: absolute;
+    top: 0;
+    left: calc(47rem/64);
+}
+
+header .search_btn {
+    position: absolute;
+    top: calc(23rem/64);
+    right: calc(24rem/64);
+    font-size: calc(25.6rem/64);
+    color: #353d44;
+}
+
+
+/* 2. 热门搜索 */
+.hot {
+    margin-top: calc(75rem/64);
+    padding: 0 calc(24rem/64);
+    padding-top: calc(38rem/64);
+    min-height: 687px;
+    background: #fff;
+}
+
+.hot h2 {
+    height: calc(34rem/64);
+    line-height: calc(34rem/64);
+    font-size: calc(25.6rem/64);
+    color: #999;
+}
+
+.hot .search_keywords {
+    margin-top: calc(4rem/64);
+}
+
+.hot .search_keywords a {
+    float: left;
+    width: calc(186rem/64);
+    height: calc(52rem/64);
+    background: #F2F2F2;
+    color: #333;
+    margin-top: calc(16rem/64);
+    margin-right: calc(16rem/64);
+    line-height: calc(52rem/64);
+    text-align: center;
+    border-radius: calc(8rem/64);
+    font-size: calc(22.2rem/64);
+}
+
+.hot .search_keywords a:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.hot .search_keywords .ad {
+    color: #f60;
+}

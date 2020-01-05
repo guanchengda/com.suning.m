@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="./lib/flexible_css.debug.js"></script>
+    <script src="./lib/flexible.debug.js"></script>
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+    <!-- 1. 头部 -->
+    <header>
+        <a href="./list1.html" class="back"></a>
+        <div class="search">
+            <i></i>
+            <input type="text" id="search" placeholder="请输入您想找的商品" name="wapsssry_none_ssk_ssk"
+                onfocus="if(this.value===this.defaultValue) {this.value=''};this.style.color='#222';"
+                onblur="if(this.value==='') {this.value=this.defaultValue;this.style.color='#999';}"
+                style="color: rgb(153, 153, 153);" value="年货礼盒">
+        </div>
+        <a href="#" class="search_btn">搜索</a>
+    </header>
+
+
+    <!-- 2. 热门搜索 -->
+    <div class="hot">
+        <h2>热门搜索</h2>
+        <div class="search_keywords">
+            <a href="javascript:;">手机</a>
+            <a href="javascript:;" class="ad">美的超品日</a>
+            <a href="javascript:;" class="ad">海信5折</a>
+            <a href="javascript:;">电视</a>
+            <a href="javascript:;">洗衣机</a>
+            <a href="javascript:;" class="ad">电视半价抢</a>
+            <a href="javascript:;" class="ad">吸尘器</a>
+            <a href="javascript:;">茅台</a>
+            <a href="javascript:;">热水器</a>
+            <a href="javascript:;">ipad</a>
+            <a href="javascript:;">微波炉</a>
+        </div>
+    </div>
+</body>
+
+</html>
