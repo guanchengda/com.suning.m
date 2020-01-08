@@ -1,2 +1,3 @@
 # com.suning.m
-HTML+CSS 移动Web项目
+移动端项目：苏宁官网(仿)
+
