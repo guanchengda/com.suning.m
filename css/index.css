@@ -957,7 +957,7 @@ main .download_app {}
 .bottom_nav li img {
     width: calc(41rem/64);
     height: calc(41rem/64);
-    margin: calc(10rem/64) auto calc(4rem/64);
+    margin: calc(11rem/64) auto calc(4rem/64);
 }
 
 .bottom_nav li span {
@@ -968,3 +968,4 @@ main .download_app {}
 .bottom_nav li:first-child span {
     font-weight: 700;
 }
+
