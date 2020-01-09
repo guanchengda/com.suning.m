@@ -29,9 +29,11 @@ body {
     border-top: calc(1rem/64) solid #353d44;
     border-left: calc(1rem/64) solid #353d44;
     transform: rotate(-45deg);
-    margin-left: calc(28rem/64);
-    margin-right: calc(18rem/64);
+    margin-top: calc(-3rem/64);
+    margin-left: calc(29rem/64);
+    margin-right: calc(19rem/64);
 }
+
 
 
 .search {
@@ -40,13 +42,14 @@ body {
 }
 
 .search input {
-    width: calc(548rem/64);
+    width: calc(552rem/64);
     height: calc(50rem/64);
     border: 1px solid #cccccc;
     border-radius: calc(6rem/64);
-    padding-left: calc(44rem/64);
-    font-size: 14px;
+    padding-left: calc(46rem/64);
+    font-size: calc(22.2rem/64);
     color: #222222;
+    padding-top: 2px;
 }
 
 input::-webkit-input-placeholder {
@@ -55,8 +58,8 @@ input::-webkit-input-placeholder {
 
 .search i {
     position: absolute;
-    top: calc(12rem/64);
-    left: calc(10rem/64);
+    top: calc(13rem/64);
+    left: calc(12rem/64);
     width: calc(26rem/64);
     height: calc(26rem/64);
     background: url(../image/search-icon3.png) no-repeat center center;
