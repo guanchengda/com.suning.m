@@ -136,7 +136,7 @@ body {
     background-size: calc(85.4rem/64) calc(85.4rem/64);
     position: fixed;
     bottom: calc(105rem/64);
-    right: calc(13rem/64);
+    right: calc(12rem/64);
     z-index: 99;
 }
 
@@ -773,7 +773,7 @@ main .guess_like {
 }
 
 .like_goods p {
-    height: calc(57rem/64);
+    height: calc(52rem/64);
     line-height: calc(29rem/64);
     font-size: calc(22.2rem/64);
     font-weight: 700;

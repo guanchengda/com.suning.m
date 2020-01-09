@@ -88,7 +88,7 @@ header .search_btn {
     margin-top: calc(75rem/64);
     padding: 0 calc(24rem/64);
     padding-top: calc(38rem/64);
-    min-height: 687px;
+    min-height: calc(1310rem/64);
     background: #fff;
 }
 
