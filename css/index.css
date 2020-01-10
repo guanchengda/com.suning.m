@@ -641,6 +641,7 @@ main .recommend_list {
     color: #fff;
     font-size: calc(22rem/64);
     text-align: center;
+    white-space: nowrap;
 }
 
 .recommend_list .p p:nth-of-type(2) {
@@ -968,4 +969,3 @@ main .download_app {}
 .bottom_nav li:first-child span {
     font-weight: 700;
 }
-

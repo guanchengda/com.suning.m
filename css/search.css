@@ -11,7 +11,7 @@ body {
 
 /* 1. 头部 */
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -88,8 +88,8 @@ header .search_btn {
     margin-top: calc(75rem/64);
     padding: 0 calc(24rem/64);
     padding-top: calc(38rem/64);
-    min-height: calc(1310rem/64);
     background: #fff;
+    min-height: 687px;
 }
 
 .hot h2 {
