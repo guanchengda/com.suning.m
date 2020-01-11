@@ -109,12 +109,12 @@ header .search_btn {
     height: calc(52rem/64);
     background: #F2F2F2;
     color: #333;
+    font-size: calc(22.2rem/64);
     margin-top: calc(16rem/64);
     margin-right: calc(16rem/64);
     line-height: calc(52rem/64);
     text-align: center;
     border-radius: calc(8rem/64);
-    font-size: calc(22.2rem/64);
 }
 
 .hot .search_keywords a:nth-of-type(3n) {
